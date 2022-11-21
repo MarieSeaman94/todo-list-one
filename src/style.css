@@ -1,6 +1,7 @@
 :root {
-	--primary: #EA40A4;
-	--business: #3A82EE;
+	--primary: #E36414;
+	--business: #0F4C5C;
+  --friends-family: #5F0F40;
 	--personal: var(--primary);
 	--light: #EEE;
 	--grey: #888;
@@ -121,6 +122,11 @@ input[type="checkbox"] {
 .bubble.personal {
 	border-color: var(--personal);
 	box-shadow: var(--personal-glow);
+}
+
+.bubble.friends-family {
+  border-color: var(--friends-family);
+	box-shadow: var(--friends-family);
 }
 
 .bubble::after {
