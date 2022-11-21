@@ -1,12 +1,12 @@
 :root {
-	--primary: #E36414;
-	--business: #0F4C5C;
+	--primary: #0F4C5C;
+	--business: #FB8B24;
   --friends-family: #5F0F40;
 	--personal: var(--primary);
 	--light: #EEE;
 	--grey: #888;
 	--dark: #313154;
-	--danger: #ff5b57;
+	--danger: #E36414;
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 

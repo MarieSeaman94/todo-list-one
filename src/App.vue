@@ -32,6 +32,10 @@ watch(todos, (newVal) => {
 	deep: true
 })
 
+const removeTodo = (todo) => {
+	todos.value = todos.value.filter((t) => t !== todo)
+}
+
 onMounted(() => {
   name.value = localStorage.getItem('name') || ''
   todos.value =JSON.parse(localStorage.getItem('todos')) || []
