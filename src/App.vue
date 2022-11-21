@@ -7,17 +7,29 @@ const name = ref('')
 
 const input_content = ref('')
 const input_category = ref(null)
-
 const todos_asc = computed(() => todos.value.sort((a, b) => {
   return b.createdAt - a.createdAt
 }))
 
 const addTodo = () => {
-
+  if (input_content.value.trim() === '' || input_category.value === null) {
+    return
+  }
+  todos.value.push({
+    content: input_content.value,
+    category: input_category.value,
+    done: false,
+    createdAt: new Date().getTime()
+  })
 }
 
 watch(name, (newVal) => {
-  localStorage.setItem('name', newVal)
+	localStorage.setItem('name', newVal)
+})
+watch(todos, (newVal) => {
+	localStorage.setItem('todos', JSON.stringify(newVal))
+}, {
+	deep: true
 })
 
 onMounted(() => {
@@ -70,6 +82,8 @@ onMounted(() => {
               <div>Friends/Family</div>
             </label>
           </div>
+          <input type="submit" value="Add todo">
+
         </form>
     </section>
 </main>
