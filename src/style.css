@@ -10,8 +10,8 @@
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+	--business-glow: 0px 0px 4px #f7aa62;
+	--primary-glow: 0px 0px 4px #37545b;
 }
 
 * {
@@ -120,13 +120,13 @@ input[type="checkbox"] {
 }
 
 .bubble.personal {
-	border-color: var(--personal);
-	box-shadow: var(--personal-glow);
+	border-color: var(--business);
+	box-shadow: var(--business-glow);
 }
 
 .bubble.friends-family {
-  border-color: var(--friends-family);
-	box-shadow: var(--friends-family);
+  border-color: var(--business);
+	box-shadow: var(--business-glow);
 }
 
 .bubble::after {
@@ -166,7 +166,7 @@ input:checked ~ .bubble::after {
 	color: #FFF;
 	background-color: var(--primary);
 	border-radius: 0.5rem;
-	box-shadow: var(--personal-glow);
+	box-shadow: var(--primary-glow);
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
 }
