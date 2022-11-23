@@ -1,7 +1,8 @@
 :root {
 	--primary: #0F4C5C;
-	--business: #FB8B24;
+	--business: #fbac24;
   --secondary: #5F0F40;
+  --tertiary: #E36414;
 	--light: #EEE;
 	--grey: #888;
 	--dark: #313154;
@@ -9,8 +10,10 @@
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-	--business-glow: 0px 0px 4px #f7aa62;
+	--business-glow: 0px 0px 4px #fdca72;
 	--primary-glow: 0px 0px 4px #37545b;
+  --secondary-glow: 0px 0px 4px #623852;
+  --tertiary-glow: 0px 0px 4px #d98d5d;
 }
 
 * {
@@ -218,6 +221,7 @@ input:checked ~ .bubble::after {
 
 .todo-item.false .bubble {
   border-color: var(--secondary);
+  box-shadow: var(--secondary-glow);
 }
 .todo-item .actions .edit {
 	margin-right: 0.5rem;
