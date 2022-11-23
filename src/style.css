@@ -1,7 +1,7 @@
 :root {
 	--primary: #0F4C5C;
 	--business: #FB8B24;
-  --friends-family: #5F0F40;
+  --secondary: #5F0F40;
 	--light: #EEE;
 	--grey: #888;
 	--dark: #313154;
@@ -140,7 +140,6 @@ input[type="checkbox"] {
 	transition: 0.2s ease-in-out;
 }
 
-
 input:checked ~ .bubble::after {
 	width: 10px;
 	height: 10px;
@@ -217,6 +216,9 @@ input:checked ~ .bubble::after {
 	opacity: 0.75;
 }
 
+.todo-item.false .bubble {
+  border-color: var(--secondary);
+}
 .todo-item .actions .edit {
 	margin-right: 0.5rem;
 	background-color: var(--primary);
