@@ -32,6 +32,9 @@ watch(todos, (newVal) => {
 	deep: true
 })
 
+input_content.value = ''
+input_category.value = null
+
 const removeTodo = (todo) => {
 	todos.value = todos.value.filter((t) => t !== todo)
 }
